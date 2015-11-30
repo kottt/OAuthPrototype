@@ -5,6 +5,27 @@ VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OAuthPrototype.API", "OAuthPrototype.API\OAuthPrototype.API.csproj", "{31881428-798A-4643-817F-98B5C0EFFAE1}"
 EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "OAuthPrototype.Web", "OAuthPrototype.Web\", "{552D6E0E-3E0B-40F9-90C0-70FAD97E8085}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_40416"
+		Debug.AspNetCompiler.PhysicalPath = "OAuthPrototype.Web\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_40416\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_40416"
+		Release.AspNetCompiler.PhysicalPath = "OAuthPrototype.Web\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_40416\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "40416"
+		SlnRelativePath = "OAuthPrototype.Web\"
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +36,10 @@ Global
 		{31881428-798A-4643-817F-98B5C0EFFAE1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{31881428-798A-4643-817F-98B5C0EFFAE1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{31881428-798A-4643-817F-98B5C0EFFAE1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{552D6E0E-3E0B-40F9-90C0-70FAD97E8085}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{552D6E0E-3E0B-40F9-90C0-70FAD97E8085}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{552D6E0E-3E0B-40F9-90C0-70FAD97E8085}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{552D6E0E-3E0B-40F9-90C0-70FAD97E8085}.Release|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
