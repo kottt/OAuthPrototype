@@ -28,3 +28,7 @@ app.config(function ($routeProvider) {
 app.run(["authService", function (authService) {
 	authService.fillAuthData();
 }]);
+
+app.config(function ($httpProvider) {
+	$httpProvider.interceptors.push("authInterceptorService");
+});
