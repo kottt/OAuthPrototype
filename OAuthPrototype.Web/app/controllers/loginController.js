@@ -1,9 +1,10 @@
 ﻿"use strict";
-app.controller("loginController", ["$scope", "$location", "authService", function ($scope, $location, authService) {
+app.controller("loginController", ["$scope", "$location", "authService", "ngAuthSettings", function ($scope, $location, authService, ngAuthSettings) {
 
 	$scope.loginData = {
 		userName: "",
-		password: ""
+		password: "",
+ 		useRefreshTokens: false
 	};
 
 	$scope.message = "";
