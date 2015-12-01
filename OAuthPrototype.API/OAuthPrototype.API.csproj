@@ -152,12 +152,17 @@
     <Compile Include="Migrations\201511301145052_Init.Designer.cs">
       <DependentUpon>201511301145052_Init.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201512011350576_RefreshToken.cs" />
+    <Compile Include="Migrations\201512011350576_RefreshToken.Designer.cs">
+      <DependentUpon>201512011350576_RefreshToken.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Enum.cs" />
     <Compile Include="Entities\RefreshToken.cs" />
     <Compile Include="Models\UserModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Providers\SimpleAuthorizationServerProvider.cs" />
+    <Compile Include="Providers\SimpleRefreshTokenProvider.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -175,6 +180,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201511301145052_Init.resx">
       <DependentUpon>201511301145052_Init.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201512011350576_RefreshToken.resx">
+      <DependentUpon>201512011350576_RefreshToken.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
