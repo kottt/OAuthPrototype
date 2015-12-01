@@ -146,6 +146,7 @@
     <Compile Include="AuthRepository.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\OrdersController.cs" />
+    <Compile Include="Controllers\RefreshTokensController.cs" />
     <Compile Include="Entities\Client.cs" />
     <Compile Include="Helper.cs" />
     <Compile Include="Migrations\201511301145052_Init.cs" />
