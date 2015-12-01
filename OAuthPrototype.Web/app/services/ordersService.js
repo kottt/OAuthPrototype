@@ -1,7 +1,7 @@
 ﻿"use strict";
-app.factory("ordersService", ["$http", function ($http) {
+app.factory("ordersService", ["$http", "ngAuthSettings", function ($http, ngAuthSettings) {
 
-	var serviceBase = "http://localhost:91/";
+	var serviceBase = ngAuthSettings.apiServiceBaseUri;
 	var ordersServiceFactory = {};
 
 	var getOrders = function () {
