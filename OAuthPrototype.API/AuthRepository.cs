@@ -86,6 +86,28 @@ namespace OAuthPrototype.API {
 
 		#endregion
 
+		#region ExternalLogin
+
+		public async Task<IdentityUser> FindAsync(UserLoginInfo loginInfo) {
+			IdentityUser user = await _userManager.FindAsync(loginInfo);
+
+			return user;
+		}
+
+		public async Task<IdentityResult> CreateAsync(IdentityUser user) {
+			var result = await _userManager.CreateAsync(user);
+
+			return result;
+		}
+
+		public async Task<IdentityResult> AddLoginAsync(string userId, UserLoginInfo login) {
+			var result = await _userManager.AddLoginAsync(userId, login);
+
+			return result;
+		}
+
+		#endregion
+
 		public void Dispose() {
 			_ctx.Dispose();
 			_userManager.Dispose();
