@@ -10,6 +10,12 @@ app.factory("authService", ["$http", "$q", "localStorageService", "ngAuthSetting
 		useRefreshTokens: false
 	};
 
+	var externalAuthData = {
+		provider: "",
+		userName: "",
+		externalAccessToken: ""
+	};
+
 	var logOut = function () {
 		localStorageService.remove("authorizationData");
 
@@ -92,12 +98,59 @@ app.factory("authService", ["$http", "$q", "localStorageService", "ngAuthSetting
 		return deferred.promise;
 	};
 
+	var obtainAccessToken = function (externalData) {
+		var deferred = $q.defer();
+
+		$http.get(serviceBase + "api/account/ObtainLocalAccessToken", { params: { provider: externalData.provider, externalAccessToken: externalData.externalAccessToken } }).success(function (response) {
+
+			localStorageService.set("authorizationData", { token: response.access_token, userName: response.userName, refreshToken: "", useRefreshTokens: false });
+
+			authentication.isAuth = true;
+			authentication.userName = response.userName;
+			authentication.useRefreshTokens = false;
+
+			deferred.resolve(response);
+
+		}).error(function (err, status) {
+			logOut();
+			deferred.reject(err);
+		});
+
+		return deferred.promise;
+	};
+
+	var registerExternal = function (registerExternalData) {
+		var deferred = $q.defer();
+
+		$http.post(serviceBase + "api/account/registerexternal", registerExternalData).success(function (response) {
+
+			localStorageService.set("authorizationData", { token: response.access_token, userName: response.userName, refreshToken: "", useRefreshTokens: false });
+
+			authentication.isAuth = true;
+			authentication.userName = response.userName;
+			authentication.useRefreshTokens = false;
+
+			deferred.resolve(response);
+
+		}).error(function (err, status) {
+			logOut();
+			deferred.reject(err);
+		});
+
+		return deferred.promise;
+	};
+
+
 	authServiceFactory.saveRegistration = saveRegistration;
 	authServiceFactory.login = login;
 	authServiceFactory.logOut = logOut;
 	authServiceFactory.fillAuthData = fillAuthData;
 	authServiceFactory.authentication = authentication;
 	authServiceFactory.refreshToken = refreshToken;
+
+	authServiceFactory.obtainAccessToken = obtainAccessToken;
+	authServiceFactory.externalAuthData = externalAuthData;
+	authServiceFactory.registerExternal = registerExternal;
 
 	return authServiceFactory;
 }]);
