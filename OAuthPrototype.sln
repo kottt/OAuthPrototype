@@ -26,6 +26,8 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "OAuthPrototype.Web", "OAuth
 		SlnRelativePath = "OAuthPrototype.Web\"
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OAuthPrototype.IdentityServer", "OAuthPrototype.IdentityServer\OAuthPrototype.IdentityServer.csproj", "{885E5C74-51AB-48D4-9447-A509835C7189}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -40,6 +42,10 @@ Global
 		{552D6E0E-3E0B-40F9-90C0-70FAD97E8085}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{552D6E0E-3E0B-40F9-90C0-70FAD97E8085}.Release|Any CPU.ActiveCfg = Debug|Any CPU
 		{552D6E0E-3E0B-40F9-90C0-70FAD97E8085}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{885E5C74-51AB-48D4-9447-A509835C7189}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{885E5C74-51AB-48D4-9447-A509835C7189}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{885E5C74-51AB-48D4-9447-A509835C7189}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{885E5C74-51AB-48D4-9447-A509835C7189}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
