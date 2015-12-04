@@ -16,7 +16,7 @@
     <RootNamespace>OAuthPrototype.API</RootNamespace>
     <AssemblyName>OAuthPrototype.API</AssemblyName>
     <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
-    <UseIISExpress>true</UseIISExpress>
+    <UseIISExpress>false</UseIISExpress>
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
@@ -147,6 +147,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="authComplete.html" />
+    <Content Include="content\css\bootstrap.min.css" />
+    <Content Include="content\css\site.css" />
+    <Content Include="index.html" />
+    <Content Include="scripts\auth.js" />
+    <Content Include="scripts\authComplete.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -214,7 +220,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>42517</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:42517/</IISUrl>
+          <IISUrl>http://localhost:91</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

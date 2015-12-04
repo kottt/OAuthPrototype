@@ -178,19 +178,19 @@ namespace OAuthPrototype.API.Controllers {
 				return "redirect_uri is invalid";
 			}
 
-			var clientId = GetQueryString(request, "client_id");
-			if (string.IsNullOrWhiteSpace(clientId)) {
-				return "client_Id is required";
-			}
+			//var clientId = GetQueryString(request, "client_id");
+			//if (string.IsNullOrWhiteSpace(clientId)) {
+			//	return "client_Id is required";
+			//}
 
-			var client = _repo.FindClient(clientId);
-			if (client == null) {
-				return $"Client_id '{clientId}' is not registered in the system.";
-			}
+			//var client = _repo.FindClient(clientId);
+			//if (client == null) {
+			//	return $"Client_id '{clientId}' is not registered in the system.";
+			//}
 
-			if (!string.Equals(client.AllowedOrigin, redirectUri.GetLeftPart(UriPartial.Authority), StringComparison.OrdinalIgnoreCase)) {
-				return $"The given URL is not allowed by Client_id '{clientId}' configuration.";
-			}
+			//if (!string.Equals(client.AllowedOrigin, redirectUri.GetLeftPart(UriPartial.Authority), StringComparison.OrdinalIgnoreCase)) {
+			//	return $"The given URL is not allowed by Client_id '{clientId}' configuration.";
+			//}
 
 			redirectUriOutput = redirectUri.AbsoluteUri;
 
